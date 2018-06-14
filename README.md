@@ -37,7 +37,7 @@ URI | Methods allowed
 --- | ---
 `http://<host>/ordertotal` | POST
 
-**Expects** in the request body a JSON object containing a string `orderID` and a dictionary `foodOrder`. `orderID` is a client-side correlation ID -- put anything you want as we don't save it or enforce uniqueness or sequentiality on it. `foodOrder` keys are menu items (as returned from the `/menu` endpoint) and values are quantity of that item. Example:
+**Expects** in the request body a JSON object containing a string `orderID` and a dictionary `foodOrder`. `orderID` is a client-side correlation ID -- put anything you want as we don't save it or enforce uniqueness or sequentiality on it. `foodOrder` keys are menu items (as returned from the `/menu` endpoint) and values are the integer quantity of that item. Quantity must be non-negative. Example:
 
 ```json
 {
@@ -57,3 +57,6 @@ URI | Methods allowed
     "total": 8.8
 }
 ```
+
+### Errors
+TacoTotalizer will return a HTTP 400 Bad Request error if you attempt to order something that's not on the menu (capitalization matters!) or negative quantity of an item.
