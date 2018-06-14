@@ -8,16 +8,16 @@ import java.util.HashMap;
  *
  */
 public class OrderTotalRequest {
-	private final long orderID;
+	private final String orderID;
 	// name of food: quantity
 	private final HashMap<String, Integer> foodOrder;
 	
-	public OrderTotalRequest(long ID, HashMap<String, Integer> foodOrder) {
-		this.orderID = ID;
+	public OrderTotalRequest(String orderID, HashMap<String, Integer> foodOrder) {
+		this.orderID = orderID;
 		this.foodOrder = foodOrder;
 	}
 
-	public long getID() {
+	public String getOrderID() {
 		return orderID;
 	}
 

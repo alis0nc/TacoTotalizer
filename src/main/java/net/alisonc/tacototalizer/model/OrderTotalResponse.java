@@ -6,15 +6,15 @@ package net.alisonc.tacototalizer.model;
  *
  */
 public class OrderTotalResponse {
-	private final long orderID;
+	private final String orderID;
 	private final double total;
 	
-	public OrderTotalResponse(long ID, double total) {
+	public OrderTotalResponse(String ID, double total) {
 		this.orderID = ID;
 		this.total = total;
 	}
 
-	public long getID() {
+	public String getOrderID() {
 		return orderID;
 	}
 
