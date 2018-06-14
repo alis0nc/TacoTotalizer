@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.alisonc.tacototalizer.data.TacoLocoMenu;
-import net.alisonc.tacototalizer.model.*;
+import net.alisonc.tacototalizer.model.OrderTotalRequest;
+import net.alisonc.tacototalizer.model.OrderTotalResponse;
 
 /**
  * This class is a controller for the order totals web service.
